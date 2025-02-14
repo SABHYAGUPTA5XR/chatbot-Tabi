@@ -1,7 +1,9 @@
 # Tabi Chatbot
 
 Tabi Chatbot is a friendly, modern chatbot built with Flask, HTML, CSS, and JavaScript that leverages the Mistral AI API to generate conversational responses. Tabi is designed to be approachable and efficient, offering concise responses for common phrases such as "Thanks", "Bye", or "Okay" while engaging in more detailed conversations when needed.
-![Tabi Chatbot UI](img/screenshot.png)
+<p align="center">
+  <img src="img/ss.png" width="800" />
+</p>
 
 ---
 ## Table of Contents
