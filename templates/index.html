@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chatbot UI</title>
-    <link rel="stylesheet" href="../static/styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tabi Chatbot</title>
+  <link rel="stylesheet" href="../static/styles.css">
 </head>
 <body>
+  <div class="chat-wrapper">
+    <header class="chat-header">
+      <h1>Tabi</h1>
+      <p>Your friendly assistant</p>
+    </header>
     <div id="chat-container">
-        <div id="chat-history"></div>
-        <div id="input-area">
-            <input type="text" id="user-input" placeholder="Enter your query" />
-            <button id="send-btn">Send</button>
-        </div>
+      <div id="chat-history"></div>
+      <div id="input-area">
+        <input type="text" id="user-input" placeholder="Enter your query" />
+        <button id="send-btn">Send</button>
+      </div>
     </div>
-    <script src="../static/script.js"></script>
+  </div>
+  <script src="../static/script.js"></script>
 </body>
 </html>

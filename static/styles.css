@@ -1,35 +1,129 @@
-body {
-    font-family: Arial, sans-serif;
-}
-
-#chat-container {
-    width: 600px;
-    margin: 50px auto;
-    border: 1px solid #ccc;
-    padding: 20px;
-}
-
-.message {
-    margin-bottom: 10px;
-}
-
-.user {
-    color: blue;
-}
-
-.bot {
-    color: green;
-}
-
-#input-area {
+/* Reset and Base Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background: #4727543d;
+    color: #333;
     display: flex;
-}
-
-#user-input {
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Chat Wrapper & Header */
+  .chat-wrapper {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .chat-header {
+    background: #4a90e2;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .chat-header h1 {
+    font-size: 2em;
+    margin-bottom: 5px;
+  }
+  
+  .chat-header p {
+    font-size: 1em;
+  }
+  
+  /* Chat Container */
+  #chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+  }
+  
+  #chat-history {
     flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background: #fafafa;
+  }
+  
+  /* Message Styling */
+  .message {
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    max-width: 80%;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+  }
+  
+  .message.user {
+    background: #e0f7fa;
+    align-self: flex-end;
+    color: #00796b;
+  }
+  
+  .message.bot {
+    background: #e8f5e9;
+    align-self: flex-start;
+    color: #2e7d32;
+  }
+  
+  /* Input Area */
+  #input-area {
+    display: flex;
     padding: 10px;
-}
-
-#send-btn {
-    padding: 10px 20px;
-}
+    border-top: 1px solid #ddd;
+    background: #fff;
+  }
+  
+  #user-input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    font-size: 1em;
+  }
+  
+  #send-btn {
+    padding: 12px 20px;
+    background: #4a90e2;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  #send-btn:hover {
+    background: #357abd;
+  }
+  
+  /* Fade-In Animation for Messages */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Responsive Adjustments */
+  @media (max-width: 600px) {
+    #chat-container {
+      height: 400px;
+    }
+  
+    .chat-header h1 {
+      font-size: 1.5em;
+    }
+  }
+  

@@ -25,6 +25,11 @@ def chat_with_mistral(query):
         model=model,
         messages=[
             {"role": "system", "content": "You are a helpful assistant."},
+            {"role": "system", "content": "You are a friendly assistant named Tabi. When a user says 'Thanks', 'Bye', or 'Okay', reply with a concise and varied response such as 'Happy to help!' or 'I'm here if you need anything.' Avoid long, repetitive responses."},
+            {"role": "user", "content": "Thanks"},
+            {"role": "assistant", "content": "Happy to help!"},
+            {"role": "user", "content": "Bye"},
+            {"role": "assistant", "content": "Take care! I'm here whenever you need me."},
             {"role": "user", "content": query},
         ]
     )
