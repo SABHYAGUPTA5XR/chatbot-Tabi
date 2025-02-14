@@ -1,7 +1,9 @@
 # Tabi Chatbot
 
 Tabi Chatbot is a friendly, modern chatbot built with Flask, HTML, CSS, and JavaScript that leverages the Mistral AI API to generate conversational responses. Tabi is designed to be approachable and efficient, offering concise responses for common phrases such as "Thanks", "Bye", or "Okay" while engaging in more detailed conversations when needed.
+![Tabi Chatbot UI](img/screenshot.png)
 
+---
 ## Table of Contents
 
 - [Features](#features)
@@ -9,7 +11,6 @@ Tabi Chatbot is a friendly, modern chatbot built with Flask, HTML, CSS, and Java
 - [Installation](#installation)
 - [Configuration](#configuration)
 - [Project Structure](#project-structure)
-- [Screenshot](#screenshot)
 - [Usage](#usage)
 - [Notes](#notes)
 - [License](#license)
@@ -30,58 +31,61 @@ Tabi Chatbot is a friendly, modern chatbot built with Flask, HTML, CSS, and Java
 
 ## Installation
 
-1. **Clone the Repository:**
+### 1. Clone the Repository
 
-   ```bash
-   git clone https://github.com/yourusername/tabi-chatbot.git
-   cd tabi-chatbot
-Create and Activate a Virtual Environment:
+```bash
+git clone https://github.com/SABHYAGUPTA5XR/chatbot-tabi.git
+cd chatbot-tabi
+```
 
-bash
-Copy
-Edit
+### 2. Create and Activate a Virtual Environment
+
+#### On Windows:
+```bash
 python -m venv venv
-On Windows:
-bash
-Copy
-Edit
 venv\Scripts\activate
-On macOS/Linux:
-bash
-Copy
-Edit
+```
+
+#### On macOS/Linux:
+```bash
+python -m venv venv
 source venv/bin/activate
-Install the Required Packages:
+```
 
-bash
-Copy
-Edit
+### 3. Install the Required Packages
+
+```bash
 pip install -r requirements.txt
-If you don't have a requirements.txt, create one with the following content:
+```
 
-txt
-Copy
-Edit
+If you don't have a `requirements.txt`, create one with the following content:
+
+```txt
 Flask
 mistralai
 python-dotenv
-Configuration
-Mistral API Key:
+```
 
-Create a .env file in the project root directory.
+---
 
-Add your Mistral API key to the file:
+## Configuration
 
-env
-Copy
-Edit
+### Mistral API Key:
+
+1. Create a `.env` file in the project root directory.
+2. Add your Mistral API key to the file:
+
+```env
 MISTRAL_API_KEY=your_mistral_api_key_here
-The application will load this variable at startup using python-dotenv.
+```
 
-Project Structure
-bash
-Copy
-Edit
+The application will load this variable at startup using `python-dotenv`.
+
+---
+
+## Project Structure
+
+```
 tabi-chatbot/
 ├── app.py              # Main Flask application
 ├── .env                # Environment variables (contains MISTRAL_API_KEY)
@@ -92,42 +96,49 @@ tabi-chatbot/
 │   ├── styles.css      # CSS file for styling the UI
 │   └── script.js       # JavaScript file for chatbot functionality
 └── img/
-    └── screenshot.png  # Screenshot image of the chatbot UI
-Screenshot
-Below is a preview of the Tabi Chatbot UI:
+    └── ss.png  # Screenshot image of the chatbot UI
+```
 
+---
 
-Usage
-Run the Flask Application:
+## Usage
 
-bash
-Copy
-Edit
+### Run the Flask Application:
+
+```bash
 python app.py
-Access the Chatbot UI:
+```
 
-Open your browser and navigate to http://127.0.0.1:5000/ to interact with Tabi.
+### Access the Chatbot UI:
 
-Interacting with Tabi:
+Open your browser and navigate to:
 
-Type your message in the input field and press Send.
-Tabi uses the Mistral AI API to generate responses based on your input and preloaded instructions.
-Notes
-Cost Management:
-Each API call to Mistral AI will consume your credits. Monitor your usage and consider implementing rate limiting or caching for high-traffic deployments.
+```
+http://127.0.0.1:5000/
+```
 
-Customization:
-Feel free to modify the HTML, CSS, or JavaScript files to further enhance Tabi's user interface and behavior.
+### Interacting with Tabi:
 
-Response Handling:
-The system prompt in app.py includes a few-shot example for common phrases like "Thanks" and "Bye" to ensure Tabi gives concise responses.
+- Type your message in the input field and press **Send**.
+- Tabi uses the **Mistral AI API** to generate responses based on your input and preloaded instructions.
 
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+---
 
-## Screenshot
+## Notes
 
-Below is a preview of the Tabi Chatbot UI:
+### Cost Management:
+- Each API call to Mistral AI will consume your credits.
+- Monitor your usage and consider implementing **rate limiting** or **caching** for high-traffic deployments.
 
-![Screenshot of Tabi Chatbot UI](img/ss.png)
+### Customization:
+- Feel free to modify the **HTML, CSS, or JavaScript** files to enhance Tabi's user interface and behavior.
+
+### Response Handling:
+- The system prompt in `app.py` includes **few-shot examples** for common phrases like "Thanks" and "Bye" to ensure concise responses.
+
+---
+
+## License
+
+This project is licensed under the **MIT License**. See the `LICENSE` file for details.
 
