@@ -129,5 +129,5 @@ This project is licensed under the MIT License. See the LICENSE file for details
 
 Below is a preview of the Tabi Chatbot UI:
 
-![Screenshot of Tabi Chatbot UI](img/screenshot.png)
+![Screenshot of Tabi Chatbot UI](img/ss.png)
 
